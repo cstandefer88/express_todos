@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My To Do List</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>My To Dos</h1>
+    <ul>
+      <% items.forEach(function(todo) { %>
+      <li><%= todo.task %></li>
+     <% }) %>
+    </ul>
+    <form action="/" method="post">
+      <div>
+        <label>To-Do:</label>
+        <input type="text" name="task">
+      </div>
+      <div>
+        <input type="submit" value="Add this to your To-Do's">
+      </div>
+    </form>
+  </body>
+</html>
